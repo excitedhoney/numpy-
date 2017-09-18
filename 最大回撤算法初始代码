@@ -1,0 +1,7 @@
+def maxdrawdown(arr):
+    drawdown_max=0
+    for i in range(len(arr)):
+        for j in range(i,len(arr)):
+            drawdown=(arr[i]-arr[j])/arr[i]
+            drawdown_max=max(drawdown_max,drawdown)
+            return drawdown_max
